@@ -34,7 +34,7 @@ const GigsSchema = new mongoose.Schema(
         /^(online|offline)$/,
         (props) => `${props.value} is not a valid submission type`,
       ],
-      default: 'active',
+      default: 'online',
       required: [true, 'Please add a Submission Type'],
     },
     status: {
