@@ -97,7 +97,7 @@ const Mainscreen = () => {
       <Tab.Screen
         name="Expenses"
         options={{
-          headerShown: true,
+          headerShown:true,
           tabBarIcon: ({ focused }) => (
             <View
               style={{
@@ -157,7 +157,7 @@ const Mainscreen = () => {
         component={Lending}
       />
       <Tab.Screen
-        name="news"
+        name="News"
         options={{
           headerShown: true,
           tabBarIcon: ({ focused }) => (
