@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Expenses from "../components/Expenses";
-import Gigs from "../components/Gigs";
+import Gigs from "../Screens/Gigs";
 import Lending from "../components/Lending";
 import React from "react";
 import Social from "../components/Social";

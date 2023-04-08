@@ -1,4 +1,7 @@
 export const CommonStyles = {
+    blue:{
+        color:"#007bff",
+    },
     container: {
         flex: 8 / 9,
     },
@@ -41,6 +44,32 @@ export const CommonStyles = {
         borderWidth:1,
         padding:10,
         borderRadius:10,
+    },
+    outlineRedBtn:{
+        borderColor:"red",
+        borderWidth:1,
+        padding:10,
+        borderRadius:10,
+    },
+    actionButton:{
+        alignItems:"center",
+        position:"absolute",
+        bottom:50,
+        right:20,
+        backgroundColor: "#007bff",
+        padding:15,
+        borderRadius:100,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 6,
+        elevation: 5,
+        width:60,
+        height: 60,
+
     }
 };
 

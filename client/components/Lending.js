@@ -11,11 +11,6 @@ const Lending = () => {
   return (
     <Tab.Navigator
       style={{ paddingTop: StatusBar.currentHeight }}
-      tabBarOptions={{
-        tabBarStyle: ({ focused }) => ({
-          backgroundColor: focused ? "grey" : "transparent",
-        }),
-      }}
     >
       <Tab.Screen
         options={{
