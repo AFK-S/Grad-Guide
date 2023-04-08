@@ -9,6 +9,7 @@ import {
   Button,
   SafeAreaView,
   TextInput,
+  RefreshControl
 } from 'react-native'
 import React, { useState, useEffect, useContext } from 'react'
 import { CommonStyles } from '../../CommonStyles'
@@ -26,7 +27,6 @@ const MyGigs = () => {
     price: '',
     location: '',
     user_id: User,
-    submission_type: 'online',
   })
   const [refetch, setRefetch] = useState(false)
   const [data, setData] = useState([])
@@ -90,6 +90,25 @@ const MyGigs = () => {
         <FontAwesomeIcon name="plus" size={30} color="#fff" />
       </TouchableOpacity>
       <FlatList
+        refreshControl={
+          <RefreshControl
+            refreshing={false}
+            onRefresh={() => {
+              ;(async () => {
+                setLoading(true)
+                try {
+                  const { data } = await axios.get(`${SERVER_URL}/api/gigs/${User}`)
+                  setData(data)
+                } catch (err) {
+                  console.error(err)
+                  if (err.response) return alert(err.response.data)
+                  alert(err)
+                }
+                setLoading(false)
+              })()
+            }}
+          />
+        }
         keyExtractor={(item, index) => index.toString()}
         showsVerticalScrollIndicator={false}
         style={{ padding: 30 }}

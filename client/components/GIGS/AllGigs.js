@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   Linking,
+  RefreshControl
 } from 'react-native'
 import React, { useState, useEffect, useContext } from 'react'
 import { CommonStyles } from '../../CommonStyles'
@@ -34,6 +35,26 @@ const AllGigs = () => {
 
   return (
     <FlatList
+    refreshControl={
+      <RefreshControl
+        refreshing={false}
+        onRefresh={() => {
+          ;(async () => {
+            setLoading(true)
+            try {
+              const { data } = await axios.get(`${SERVER_URL}/api/gigs`)
+              setData(data)
+            } catch (err) {
+              console.error(err)
+              if (err.response) return alert(err.response.data)
+              alert(err)
+            }
+            setLoading(false)
+          })()
+        }}
+      />
+
+    }
       keyExtractor={(item, index) => index.toString()}
       showsVerticalScrollIndicator={false}
       style={{ padding: 30 }}
