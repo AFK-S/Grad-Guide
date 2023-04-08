@@ -1,25 +1,24 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import Mainscreen from "./routes/Mainscreen";
-import News from "./components/News";
-import Social from "./components/Social";
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import Mainscreen from './routes/Mainscreen'
+import Auth from './auth/AuthScreen'
+import React, { useContext } from 'react'
+import StateContext, { StateProvider } from './context/StateContext'
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 export default function App() {
   return (
-    <NavigationContainer>
-      <Mainscreen />
-    </NavigationContainer>
-  );
+    <StateProvider>
+      <NavigationContainer>
+        <Provider />
+      </NavigationContainer>
+    </StateProvider>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const Provider = () => {
+  const { isLogin } = useContext(StateContext)
+  return <>{!isLogin ? <Mainscreen /> : <Auth />}</>
+}
