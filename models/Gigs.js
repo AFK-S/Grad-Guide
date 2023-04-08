@@ -22,7 +22,7 @@ const GigsSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please add a Description'],
     },
-    prize: {
+    price: {
       type: Number,
       required: [true, 'Please add a Prize'],
     },
@@ -31,7 +31,7 @@ const GigsSchema = new mongoose.Schema(
       trim: true,
       enum: ['online', 'offline'],
       match: [
-        /^(active|offline)$/,
+        /^(online|offline)$/,
         (props) => `${props.value} is not a valid submission type`,
       ],
       default: 'active',
