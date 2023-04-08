@@ -20,5 +20,5 @@ export default function App() {
 
 const Provider = () => {
   const { isLogin } = useContext(StateContext)
-  return <>{!isLogin ? <Mainscreen /> : <Auth />}</>
+  return <>{isLogin ? <Mainscreen /> : <Auth />}</>
 }

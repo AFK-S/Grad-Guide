@@ -1,17 +1,18 @@
 import { StyleSheet, Text, View,FlatList,TouchableOpacity, Alert,Modal,Button,SafeAreaView,TextInput } from "react-native";
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import { CommonStyles } from "../../CommonStyles";
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-
-
+import StateContext from '../../context/StateContext'
 
 const MyGigs = () => {
+    const { User} = useContext(StateContext)
 const [modalVisible, setModalVisible] = useState(false);
 const [newGig, setNewGig] = useState({
     title: "",
     description: "",
     price:"",
     location:"",
+    user_id: User,
 });
 const [data, setData] = useState([
     {
@@ -29,6 +30,9 @@ const [data, setData] = useState([
     setNewGig({
         title: "",
         description: "",
+        price:"",
+        location:"",
+        user_id: User,
     });
     setData([...data, newGig]);
     Alert.alert("Gig Added Successfully");

@@ -12,6 +12,7 @@ export const StateProvider = ({ children }) => {
   useEffect(() => {
     ;(async () => {
       const user = await AsyncStorage.getItem('user_id')
+      console.log(user);
       if (user === null) {
         return setIsLogin(false)
       }
