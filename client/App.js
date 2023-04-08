@@ -6,6 +6,7 @@ import Mainscreen from './routes/Mainscreen'
 import Auth from './Screens/auth/AuthScreen'
 import React, { useContext } from 'react'
 import StateContext, { StateProvider } from './context/StateContext'
+import Loading from './components/Loading'
 
 const Stack = createStackNavigator()
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
     <StateProvider>
       <NavigationContainer>
         <Provider />
+        <Loading />
       </NavigationContainer>
     </StateProvider>
   )
