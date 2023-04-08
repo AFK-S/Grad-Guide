@@ -50,7 +50,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/map.png")}
+                source={require("../assets/icons/freelance.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -80,7 +80,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/map.png")}
+                source={require("../assets/icons/network.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -110,7 +110,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/map.png")}
+                source={require("../assets/icons/budget.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -123,7 +123,7 @@ const Mainscreen = () => {
         component={Expenses}
       />
       <Tab.Screen
-        name="Lending"
+        name="Finances"
         options={{
           headerShown: true,
           tabBarIcon: ({ focused }) => (
@@ -140,7 +140,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/map.png")}
+                source={require("../assets/icons/borrow.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -170,7 +170,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/map.png")}
+                source={require("../assets/icons/news.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
