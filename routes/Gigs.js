@@ -104,7 +104,7 @@ router.get('/gigs', async (req, res) => {
 router.delete('/gigs/:gigs_id', async (req, res) => {
   const { gigs_id } = req.params
   try {
-    const gigs_response = await GigsSchema.findByIdAndDelete(gigs_id)
+    await GigsSchema.findByIdAndDelete(gigs_id)
     res.send('Successfully Deleted')
   } catch (error) {
     console.log(error)
