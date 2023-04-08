@@ -32,7 +32,7 @@ const Community = () => {
     (async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(`${SERVER_URL}/api/community/${User}`);
+        const { data } = await axios.get(`${SERVER_URL}/api/community`);
         setData(data);
       } catch (err) {
         console.error(err);
@@ -78,7 +78,7 @@ const Community = () => {
   return (
     <>
       <TouchableOpacity
-        style={{ ...CommonStyles.actionButton, zIndex: 1 }}
+        style={{ ...CommonStyles.actionButton, zIndex: 1, marginBottom: 80 }}
         onPress={() => setModalVisible(true)}
       >
         <FontAwesomeIcon name="plus" size={30} color="#fff" />
@@ -92,7 +92,7 @@ const Community = () => {
                 setLoading(true);
                 try {
                   const { data } = await axios.get(
-                    `${SERVER_URL}/api/community/${User}`
+                    `${SERVER_URL}/api/community`
                   );
                   setData(data);
                 } catch (err) {
@@ -107,14 +107,22 @@ const Community = () => {
         }
         keyExtractor={(item, index) => index.toString()}
         showsVerticalScrollIndicator={false}
-        style={{ padding: 30 }}
+        style={{ padding: 30, marginBottom: 105 }}
         data={data}
         renderItem={({ item }) => {
           return (
-            <View style={CommonStyles.card}>
+            <View
+              style={{
+                ...CommonStyles.card,
+                borderColor: "#007bff",
+                borderWidth: "1",
+                minHeight: 300,
+                maxHeight: 400,
+              }}
+            >
               <View style={CommonStyles.cardRow}>
                 <View>
-                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={CommonStyles.title}>{item.title}</Text>
                   <Text style={CommonStyles.silentText}>
                     {item.description}
                   </Text>
@@ -130,26 +138,28 @@ const Community = () => {
               >
                 Posted By : {item.user.email_address}
               </Text>
-              <View>
-                <TouchableOpacity
-                  style={{
-                    ...CommonStyles.outlineRedBtn,
-                    width: "100%",
-                    marginTop: 15,
-                  }}
-                  onPress={() => DeleteCommunity(item._id)}
-                >
-                  <Text
+              {User === item.user._id && (
+                <View>
+                  <TouchableOpacity
                     style={{
-                      textAlign: "center",
-                      fontWeight: "bold",
-                      color: "red",
+                      ...CommonStyles.outlineRedBtn,
+                      width: "100%",
+                      marginTop: 15,
                     }}
+                    onPress={() => DeleteCommunity(item._id)}
                   >
-                    Cancel
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                    <Text
+                      style={{
+                        textAlign: "center",
+                        fontWeight: "bold",
+                        color: "red",
+                      }}
+                    >
+                      Delete
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
             </View>
           );
         }}
