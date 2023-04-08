@@ -11,11 +11,6 @@ router.post(
   body('description').not().isEmpty().withMessage('Description is required'),
   body('location').not().isEmpty().withMessage('Description is required'),
   body('price').not().isEmpty().withMessage('Price is required'),
-  body('submission_type')
-    .not()
-    .isEmpty()
-    .withMessage('Submission Type is required'),
-  body('Status').not().isEmpty().withMessage('Status is required'),
   async (req, res) => {
     const {
       user_id,
@@ -33,8 +28,6 @@ router.post(
         description,
         location,
         price,
-        submission_type,
-        status,
       })
       res.send('Successfully Registered')
     } catch (error) {
