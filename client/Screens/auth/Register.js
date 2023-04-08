@@ -124,7 +124,7 @@ const Register = ({ navigation }) => {
         <TouchableOpacity
           onPress={onSubmit}
           style={{
-            backgroundColor: '#7d40ff',
+            backgroundColor: '#007bff',
             paddingVertical: 12,
             borderRadius: 12,
             paddingHorizontal: 40,
@@ -135,7 +135,7 @@ const Register = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={{ marginTop: 10 }}
-          onPress={() => navigation.navigate('register')}
+          onPress={() => navigation.navigate('login')}
         >
           <Text
             style={{

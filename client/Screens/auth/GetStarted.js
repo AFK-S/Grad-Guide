@@ -7,10 +7,22 @@ const GetStarted = ({ navigation }) => {
     <View style={styles.mainCon}>
       <View style={styles.upperPattern}></View>
       <View style={styles.textCon}>
-        {/* <Image
-          source={require('../../assets/logo.jpg')}
-          style={{ width: 150, height: 150, borderRadius: 100 }}
-        /> */}
+        <View
+          style={{
+            width: 200,
+            height: 200,
+            borderRadius: 100,
+            backgroundColor: '#f7f7f7',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Image
+            source={require('../../assets/logo.jpg')}
+            style={{ width: 150, height: 150, borderRadius: 30 }}
+          />
+        </View>
         <Text
           style={[
             {
@@ -19,7 +31,7 @@ const GetStarted = ({ navigation }) => {
             styles.title,
           ]}
         >
-          withU
+          GradGuide
         </Text>
         <TouchableOpacity
           style={styles.btn}
@@ -44,9 +56,10 @@ const styles = StyleSheet.create({
   mainCon: {
     flex: 1,
     width: '100%',
+    backgroundColor: '#f7f7f7',
   },
   upperPattern: {
-    backgroundColor: '#7d40ff',
+    backgroundColor: '#007bff',
     height: '40%',
     borderBottomEndRadius: 100,
     borderBottomStartRadius: 100,
@@ -61,7 +74,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   btn: {
-    backgroundColor: '#7d40ff',
+    backgroundColor: '#007bff',
     paddingVertical: 12,
     borderRadius: 12,
     position: 'absolute',

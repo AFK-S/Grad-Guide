@@ -50,7 +50,7 @@ const Login = ({ navigation }) => {
             styles.title,
           ]}
         >
-          withU
+          GradGuide
         </Text>
         <TextInput
           style={styles.input}
@@ -72,7 +72,7 @@ const Login = ({ navigation }) => {
         <TouchableOpacity
           onPress={onSubmit}
           style={{
-            backgroundColor: '#7d40ff',
+            backgroundColor: '#007bff',
             paddingVertical: 12,
             borderRadius: 12,
             paddingHorizontal: 40,
@@ -89,9 +89,10 @@ const Login = ({ navigation }) => {
             style={{
               textAlign: 'center',
               fontWeight: '500',
+              marginTop: 10,
             }}
           >
-            New to withU ? Register Here
+            New to GradGuide ? Register Here
           </Text>
         </TouchableOpacity>
       </SafeAreaView>
