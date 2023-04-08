@@ -81,6 +81,11 @@ export const CommonStyles = {
         fontSize:18,
         fontWeight:"bold",
         marginTop:10,
+    },
+    title:{
+        fontSize:30,
+        fontWeight:"bold",
+        marginBottom:10,
     }
 };
 

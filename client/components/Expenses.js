@@ -3,8 +3,8 @@ import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { Ionicons } from '@expo/vector-icons'
 
-import Tracker from './Tracker'
-import Statistics from './Statistics'
+import Tracker from "../Screens/Tracker";
+import Statistics from "./Statistics";
 
 const Tab = createMaterialTopTabNavigator()
 const Expenses = () => {
