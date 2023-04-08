@@ -11,7 +11,16 @@ const GetStarted = ({ navigation }) => {
           source={require('../../assets/logo.jpg')}
           style={{ width: 150, height: 150, borderRadius: 100 }}
         /> */}
-        <Text style={[Styles.bold, styles.title]}>withU</Text>
+        <Text
+          style={[
+            {
+              fontWeight: '600',
+            },
+            styles.title,
+          ]}
+        >
+          withU
+        </Text>
         <TouchableOpacity
           style={styles.btn}
           onPress={() => navigation.navigate('login')}
@@ -19,7 +28,7 @@ const GetStarted = ({ navigation }) => {
           <Text
             style={{
               color: '#fff',
-              fontFamily: Styles.bold.fontFamily,
+              fontWeight: '600',
               fontSize: 18,
             }}
           >
@@ -37,7 +46,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   upperPattern: {
-    backgroundColor: Styles.bg.backgroundColor,
+    backgroundColor: '#7d40ff',
     height: '40%',
     borderBottomEndRadius: 100,
     borderBottomStartRadius: 100,
@@ -52,7 +61,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   btn: {
-    backgroundColor: Styles.bg.backgroundColor,
+    backgroundColor: '#7d40ff',
     paddingVertical: 12,
     borderRadius: 12,
     position: 'absolute',

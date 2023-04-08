@@ -56,7 +56,14 @@ const Register = ({ navigation }) => {
       style={styles.container}
     >
       <SafeAreaView style={{ width: '100%', maxWidth: 500 }}>
-        <Text style={[Styles.bold, styles.title]}>
+        <Text
+          style={[
+            {
+              fontWeight: '600',
+            },
+            styles.title,
+          ]}
+        >
           Tell us more about you :)
         </Text>
         <TextInput
@@ -116,7 +123,13 @@ const Register = ({ navigation }) => {
         />
         <TouchableOpacity
           onPress={onSubmit}
-          style={{ ...Styles.button, marginTop: 10 }}
+          style={{
+            backgroundColor: '#7d40ff',
+            paddingVertical: 12,
+            borderRadius: 12,
+            paddingHorizontal: 40,
+            marginTop: 10,
+          }}
         >
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
@@ -127,7 +140,7 @@ const Register = ({ navigation }) => {
           <Text
             style={{
               textAlign: 'center',
-              fontFamily: Styles.medium.fontFamily,
+              fontWeight: '500',
             }}
             autoCapitalize="none"
             autoComplete="off"
@@ -164,7 +177,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontFamily: Styles.bold.fontFamily,
+    fontWeight: '600',
     fontSize: 18,
   },
 })

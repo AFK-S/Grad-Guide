@@ -42,7 +42,16 @@ const Login = ({ navigation }) => {
       style={styles.container}
     >
       <SafeAreaView style={{ width: '100%', maxWidth: 500 }}>
-        <Text style={[Styles.bold, styles.title]}>withU</Text>
+        <Text
+          style={[
+            {
+              fontWeight: '600',
+            },
+            styles.title,
+          ]}
+        >
+          withU
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Email Address"
@@ -62,7 +71,13 @@ const Login = ({ navigation }) => {
         />
         <TouchableOpacity
           onPress={onSubmit}
-          style={{ ...Styles.button, marginTop: 10 }}
+          style={{
+            backgroundColor: '#7d40ff',
+            paddingVertical: 12,
+            borderRadius: 12,
+            paddingHorizontal: 40,
+            marginTop: 10,
+          }}
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
@@ -73,7 +88,7 @@ const Login = ({ navigation }) => {
           <Text
             style={{
               textAlign: 'center',
-              fontFamily: Styles.medium.fontFamily,
+              fontWeight: '500',
             }}
           >
             New to withU ? Register Here
@@ -107,7 +122,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontFamily: Styles.bold.fontFamily,
+    fontWeight: '600',
     fontSize: 18,
   },
 })
