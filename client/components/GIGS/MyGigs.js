@@ -73,6 +73,7 @@ const MyGigs = () => {
     try {
       await axios.delete(`${SERVER_URL}/api/gigs/${gigs_id}`)
       setRefetch(!refetch)
+      Alert.alert('Gig Deleted Successfully')
     } catch (err) {
       console.error(err)
       if (err.response) return alert(err.response.data)
