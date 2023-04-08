@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,FlatList,TouchableOpacity, Alert,Modal,Button } from "react-native";
+import { StyleSheet, Text, View,FlatList,TouchableOpacity, Alert,Modal,Button,SafeAreaView,TextInput } from "react-native";
 import React,{useState} from "react";
 import { CommonStyles } from "../../CommonStyles";
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
@@ -7,17 +7,36 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 const MyGigs = () => {
 const [modalVisible, setModalVisible] = useState(false);
-  
-  const data = [
+const [newGig, setNewGig] = useState({
+    title: "",
+    description: "",
+    price:"",
+    location:"",
+});
+const [data, setData] = useState([
     {
-      "title": "Gig 1",
-      "description": "Guys please make your repo names as djcsi_ Make it a private repo and add djcsi-codeshastra-9 as collaboratorsThis is a gig",
-      "price": 100,
-      "location": "Bangalore",
-      "user" : "userhere@gmail.com",
-      "contact_number": "1234567890"
-    },
-  ]
+        "title": "Gig 1",
+        "description": "Guys please make your repo names as djcsi_ Make it a private repo and add djcsi-codeshastra-9 as collaboratorsThis is a gig",
+        "price": 100,
+        "location": "Bangalore",
+        "user" : "userhere@gmail.com",
+        "contact_number": "1234567890"
+    }
+]);
+
+  const handleSubmit = () => {
+    console.log(newGig);
+    setNewGig({
+        title: "",
+        description: "",
+    });
+    setData([...data, newGig]);
+    Alert.alert("Gig Added Successfully");
+    setTimeout(() => {
+        setModalVisible(false);
+    }, 1000);
+    
+    };
 
   return (
     <>
@@ -67,14 +86,88 @@ const [modalVisible, setModalVisible] = useState(false);
           }}
      />
       <Modal
+        animationType="slide"
         transparent={true}
         visible={modalVisible}
-        animationType="slide"
         onRequestClose={() => setModalVisible(false)}
       >
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor: 'black', opacity: 0.7, }}>
-          <Text>This is the modal content!</Text>
-          <Button title="Close Modal"  onPress={() => setModalVisible(false)}/>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            backgroundColor: '#00000080',
+            alignItems: 'center',
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: '#fff',
+              padding: 20,
+              width: '85%',
+              borderRadius: 20,
+              elevation: 5,
+              shadowColor: '#c6c6c678',
+              marginVertical: 5,
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+            }}
+          >
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                backgroundColor: '#fff',
+                width: '100%',
+              }}
+            >
+              <Text style={{fontSize:20,fontWeight:"bold"}}>Add a GIG</Text>
+              <TouchableOpacity
+                style={{ padding: 15, paddingTop: 0 }}
+                onPress={() => setModalVisible(false)}
+              >
+                <FontAwesomeIcon name="close" size={30} color="#000" />
+              </TouchableOpacity>
+            </View>
+            <View>
+                <Text style={{...CommonStyles.inputTitle}}>Title</Text>
+                <TextInput
+                value={newGig.title}
+                style={{...CommonStyles.input,marginTop:10}}
+                placeholder="Enter Title"
+                onChangeText={(value) => setNewGig({...newGig,title:value})}
+                />
+                <Text style={{...CommonStyles.inputTitle,marginTop:30}}>Location</Text>
+                <TextInput
+                value={newGig.location}
+                style={{...CommonStyles.input,marginTop:10}}
+                placeholder="Enter Location"
+                onChangeText={(value) => setNewGig({...newGig,location:value})}
+                />
+                <Text style={{...CommonStyles.inputTitle,marginTop:30}}>Description</Text>
+                <TextInput
+                value={newGig.description}
+                style={{...CommonStyles.input,marginTop:10}}
+                placeholder="Enter Description"
+                onChangeText={(value) => setNewGig({...newGig,description:value})}
+                />
+                <Text style={{...CommonStyles.inputTitle,marginTop:30}}>Price /hr</Text>
+                <TextInput
+                keyboardType="numeric"
+                value={newGig.price}
+                style={{...CommonStyles.input,marginTop:10}}
+                placeholder="Enter Price/hr"
+                onChangeText={(value) => setNewGig({...newGig,price:value})}
+                />
+            </View>
+            <TouchableOpacity style={{...CommonStyles.blueBtn,alignItems:"center",marginTop:30}} onPress={handleSubmit}>
+                <Text style={{fontWeight:"bold",color:"#fff",padding:2}}>
+                    Add GIG
+                </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </Modal>
      </>
