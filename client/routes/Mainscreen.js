@@ -140,7 +140,7 @@ const Mainscreen = () => {
               }}
             >
               <Image
-                source={require("../assets/icons/borrow.png")}
+                source={require("../assets/icons/creditor.png")}
                 resizeMode="contain"
                 style={{
                   width: 30,
