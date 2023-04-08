@@ -10,37 +10,23 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState, useContext } from 'react'
 import axios from 'axios'
-import Styles from '../CommonStyles'
-import StateContext from '../context/StateContext'
-import { SERVER_URL } from '../config'
+import Styles from '../../CommonStyles'
+import StateContext from '../../context/StateContext'
+import { SERVER_URL } from '../../config'
 
-const Register = ({ navigation }) => {
+const Login = ({ navigation }) => {
   const { setIsLogin, setLoading } = useContext(StateContext)
-  const [register, setRegister] = useState({
-    name: '',
+  const [login, setLogin] = useState({
     email_address: '',
-    phone_number: '',
-    age: '',
-    dob: '',
     password: '',
   })
 
   const onSubmit = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.post(
-        `${SERVER_URL}/api/register/user`,
-        register,
-      )
+      const { data } = await axios.put(`${SERVER_URL}/api/login`, login)
       await AsyncStorage.setItem('user_id', data)
-      setRegister({
-        name: '',
-        email_address: '',
-        phone_number: '',
-        age: '',
-        dob: '',
-        password: '',
-      })
+      setLogin({ email_address: '', password: '' })
       setIsLogin(true)
     } catch (err) {
       console.error(err)
@@ -64,51 +50,13 @@ const Register = ({ navigation }) => {
             styles.title,
           ]}
         >
-          Tell us more about you :)
+          withU
         </Text>
         <TextInput
           style={styles.input}
-          placeholder="Name"
-          onChangeText={(text) => setRegister({ ...register, name: text })}
-          value={register.name}
-          autoCapitalize="none"
-          autoComplete="off"
-        />
-        <TextInput
-          style={styles.input}
           placeholder="Email Address"
-          onChangeText={(text) =>
-            setRegister({ ...register, email_address: text })
-          }
-          value={register.email_address}
-          autoCapitalize="none"
-          autoComplete="off"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Phone Number"
-          keyboardType="numeric"
-          onChangeText={(text) =>
-            setRegister({ ...register, phone_number: text })
-          }
-          value={register.phone_number}
-          autoCapitalize="none"
-          autoComplete="off"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Age"
-          keyboardType="numeric"
-          onChangeText={(text) => setRegister({ ...register, age: text })}
-          value={register.age}
-          autoCapitalize="none"
-          autoComplete="off"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Date of Birth"
-          onChangeText={(text) => setRegister({ ...register, dob: text })}
-          value={register.dob}
+          onChangeText={(text) => setLogin({ ...login, email_address: text })}
+          value={login.email_address}
           autoCapitalize="none"
           autoComplete="off"
         />
@@ -116,10 +64,10 @@ const Register = ({ navigation }) => {
           style={styles.input}
           placeholder="Password"
           secureTextEntry
-          onChangeText={(text) => setRegister({ ...register, password: text })}
+          onChangeText={(text) => setLogin({ ...login, password: text })}
           autoCapitalize="none"
           autoComplete="off"
-          value={register.password}
+          value={login.password}
         />
         <TouchableOpacity
           onPress={onSubmit}
@@ -131,7 +79,7 @@ const Register = ({ navigation }) => {
             marginTop: 10,
           }}
         >
-          <Text style={styles.buttonText}>Submit</Text>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{ marginTop: 10 }}
@@ -142,10 +90,8 @@ const Register = ({ navigation }) => {
               textAlign: 'center',
               fontWeight: '500',
             }}
-            autoCapitalize="none"
-            autoComplete="off"
           >
-            Back
+            New to withU ? Register Here
           </Text>
         </TouchableOpacity>
       </SafeAreaView>
@@ -159,10 +105,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     justifyContent: 'center',
-    paddingTop: 100,
   },
   title: {
-    fontSize: 30,
+    fontSize: 60,
     textAlign: 'center',
     marginBottom: 50,
   },
@@ -182,4 +127,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Register
+export default Login

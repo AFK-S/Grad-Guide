@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Mainscreen from './routes/Mainscreen'
-import Auth from './auth/AuthScreen'
+import Auth from './Screens/auth/AuthScreen'
 import React, { useContext } from 'react'
 import StateContext, { StateProvider } from './context/StateContext'
 

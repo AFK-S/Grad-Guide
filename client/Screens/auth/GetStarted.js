@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import Styles from '../CommonStyles'
+import Styles from '../../CommonStyles'
 
 const GetStarted = ({ navigation }) => {
   return (
