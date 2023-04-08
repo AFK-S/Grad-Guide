@@ -114,8 +114,6 @@ const Community = () => {
             <View
               style={{
                 ...CommonStyles.card,
-                borderColor: "#007bff",
-                borderWidth: "1",
                 minHeight: 300,
                 maxHeight: 400,
               }}
