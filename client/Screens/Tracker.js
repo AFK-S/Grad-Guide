@@ -8,6 +8,7 @@ import {
   FlatList,
   ScrollView,
   Modal,
+  Image,
   TextInput,
 } from "react-native";
 import React, { useEffect, useContext, useState } from "react";
@@ -18,9 +19,8 @@ import StateContext from "../context/StateContext";
 import * as DocumentPicker from "expo-document-picker";
 import RadioGroup from "react-native-radio-buttons-group";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-
 const Tracker = () => {
-  const { User, setLoading } = useContext(StateContext);
+  const { User, setLoading, Logout } = useContext(StateContext);
   const [userData, setUserData] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [expense, setExpense] = useState({
@@ -149,8 +149,11 @@ const Tracker = () => {
             }}
           >
             <Text style={{ ...CommonStyles.title }}>Hello {userData.name}</Text>
-            <TouchableOpacity onPress={() => Alert.alert("logout")}>
-              <Text>Logout</Text>
+            <TouchableOpacity onPress={Logout}>
+              <Image
+                source={require("../assets/icons/logout.png")}
+                style={{ width: 25, height: 25 }}
+              />
             </TouchableOpacity>
           </View>
 
