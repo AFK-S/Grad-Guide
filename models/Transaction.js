@@ -6,16 +6,6 @@ const TransactionSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please add a Owner ID'],
     },
-    name: {
-      type: String,
-      trim: true,
-      unique: true,
-      match: [
-        /^[a-zA-Z0-9]+$/,
-        (props) => `${props.value} is not a valid username`,
-      ],
-      required: [true, 'Please add a Username'],
-    },
     type_of_transaction: {
       type: String,
       trim: true,
@@ -25,6 +15,20 @@ const TransactionSchema = new mongoose.Schema(
         (props) => `${props.value} is not a valid type of transaction`,
       ],
       required: [true, 'Please add a Type of Transaction'],
+    },
+    amount: {
+      type: Number,
+      required: [true, 'Please add a Amount'],
+    },
+    type: {
+      type: String,
+      trim: true,
+      enum: ['credit', 'debit'],
+      match: [
+        /^(credit|debit)$/,
+        (props) => `${props.value} is not a valid type`,
+      ],
+      required: [true, 'Please add a Type'],
     },
     status: {
       type: String,
@@ -36,6 +40,10 @@ const TransactionSchema = new mongoose.Schema(
       ],
       default: 'completed',
       required: [true, 'Please add a Status'],
+    },
+    date: {
+      type: String,
+      required: [true, 'Please add a Transaction Date'],
     },
   },
   {
