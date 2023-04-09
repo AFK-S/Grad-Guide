@@ -10,6 +10,7 @@ import {
   Modal,
   Image,
   TextInput,
+  RefreshControl,
 } from "react-native";
 import React, { useEffect, useContext, useState } from "react";
 import { CommonStyles } from "../CommonStyles";
@@ -22,14 +23,41 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 const Tracker = () => {
   const { User, setLoading, Logout } = useContext(StateContext);
   const [userData, setUserData] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
+
   const [expenseData, setExpenseData] = useState([]);
-  const [predictExpenseData, setPredictExpenseData] = useState([]);
+  const [predictExpenseData, setPredictExpenseData] = useState({
+    food: 0,
+    travel: 0,
+    entertainment: 0,
+    miscellaneous: 0,
+    saving: 560,
+  });
   const [modalVisible, setModalVisible] = useState(false);
   const [expense, setExpense] = useState({
     amount: "",
     type_of_transaction: "",
     user_id: User,
   });
+
+  useEffect(() => {
+    // (async () => {
+    //   try {
+    //     const { data } = await axios.get(
+    //       `${SERVER_URL}/api/left_amount/${User}`
+    //     );
+    //     setPredictExpenseData({
+    //       ...predictExpenseData,
+    //       saving: data.credit_response[0].total - data.debit_response[0].total,
+    //     });
+    //     console.log(data);
+    //   } catch (err) {
+    //     console.error(err);
+    //     if (err.response) return alert(err.response.data);
+    //     alert(err);
+    //   }
+    // })();
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -40,7 +68,17 @@ const Tracker = () => {
         const { data: expenseData } = await axios.get(
           `${SERVER_URL}/api/transactions/predict/${User}`
         );
-        setPredictExpenseData(expenseData);
+        setPredictExpenseData({
+          ...predictExpenseData,
+          food: expenseData.food ? expenseData.food[0].amount : 0,
+          travel: expenseData.travel ? expenseData.travel[0].amount : 0,
+          entertainment: expenseData.entertainment
+            ? expenseData.entertainment[0].amount
+            : 0,
+          miscellaneous: expenseData.miscellaneous
+            ? expenseData.miscellaneous[0].amount
+            : 0,
+        });
       } catch (err) {
         console.error(err);
         if (err.response) return alert(err.response.data);
@@ -168,13 +206,40 @@ const Tracker = () => {
             }}
           >
             <Text style={{ ...CommonStyles.title }}>Hello {userData.name}</Text>
-            <TouchableOpacity onPress={Logout}>
-              <Image
-                source={require("../assets/icons/logout.png")}
-                style={{ width: 25, height: 25 }}
-              />
-            </TouchableOpacity>
+            <View>
+              <TouchableOpacity onPress={Logout}>
+                <Image
+                  source={require("../assets/icons/logout.png")}
+                  style={{ width: 25, height: 25 }}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  (async () => {
+                    setLoading(true);
+                    try {
+                      const { data } = await axios.get(
+                        `${SERVER_URL}/api/transaction/${User}`
+                      );
+                      setExpenseData(data);
+                    } catch (err) {
+                      console.error(err);
+                      if (err.response) return alert(err.response.data);
+                      alert(err);
+                    }
+                    setLoading(false);
+                  })();
+                }}
+              >
+                <Image
+                  source={require("../assets/icons/wall-clock.png")}
+                  style={{ width: 20, height: 20 }}
+                  marginTop={25}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
+
           <TouchableOpacity onPress={() => setModalVisible2(true)}>
             <Text style={{ fontWeight: "bold", color: "blue" }}>
               {`Set Budget`}
@@ -281,19 +346,13 @@ const Tracker = () => {
               >
                 <View>
                   <Text style={styles.mainData}>
-                    ₹
-                    {predictExpenseData.food
-                      ? predictExpenseData.food[0].amount
-                      : 0}
+                    ₹{predictExpenseData.food}
                   </Text>
                   <Text style={styles.minorTitle}>Food</Text>
                 </View>
                 <View>
                   <Text style={styles.mainData}>
-                    ₹
-                    {predictExpenseData.travel
-                      ? predictExpenseData.travel[0].amount
-                      : 0}
+                    ₹{predictExpenseData.travel}
                   </Text>
                   <Text style={styles.minorTitle}>Transport</Text>
                 </View>
@@ -309,19 +368,13 @@ const Tracker = () => {
               >
                 <View>
                   <Text style={styles.mainData}>
-                    ₹
-                    {predictExpenseData.entertainment
-                      ? predictExpenseData.entertainment[0].amount
-                      : 0}
+                    ₹{predictExpenseData.entertainment}
                   </Text>
                   <Text style={styles.minorTitle}>Entertainment</Text>
                 </View>
                 <View>
                   <Text style={styles.mainData}>
-                    ₹
-                    {predictExpenseData.miscellaneous
-                      ? predictExpenseData.miscellaneous[0].amount
-                      : 0}
+                    ₹{predictExpenseData.miscellaneous}
                   </Text>
                   <Text style={styles.minorTitle}>Miscellaneous</Text>
                 </View>
@@ -329,17 +382,7 @@ const Tracker = () => {
             </View>
             <Text style={{ marginTop: 30, fontWeight: "bold" }}>
               Your Total Saving for next month will be : ₹
-              {predictExpenseData.pocket_money &&
-              predictExpenseData.food &&
-              predictExpenseData.travel &&
-              predictExpenseData.entertainment &&
-              predictExpenseData.miscellaneous
-                ? predictExpenseData.pocket_money[0] -
-                  (predictExpenseData.food[0].amount +
-                    predictExpenseData.travel[0].amount +
-                    predictExpenseData.entertainment[0].amount +
-                    predictExpenseData.miscellaneous[0].amount)
-                : 0}
+              {predictExpenseData.saving}
             </Text>
           </View>
           <TouchableOpacity
@@ -366,6 +409,44 @@ const Tracker = () => {
               Your Recent Transactions :
             </Text>
             <FlatList
+              RefreshControl={
+                <RefreshControl
+                  refreshing={false}
+                  onRefresh={() => {
+                    (async () => {
+                      setLoading(true);
+                      try {
+                        const { data } = await axios.get(
+                          `${SERVER_URL}/api/user/${User}`
+                        );
+                        setUserData(data);
+                        const { data: expenseData } = await axios.get(
+                          `${SERVER_URL}/api/transactions/predict/${User}`
+                        );
+                        setPredictExpenseData({
+                          food: expenseData.food
+                            ? expenseData.food[0].amount
+                            : 0,
+                          travel: expenseData.travel
+                            ? expenseData.travel[0].amount
+                            : 0,
+                          entertainment: expenseData.entertainment
+                            ? expenseData.entertainment[0].amount
+                            : 0,
+                          miscellaneous: expenseData.miscellaneous
+                            ? expenseData.miscellaneous[0].amount
+                            : 0,
+                        });
+                      } catch (err) {
+                        console.error(err);
+                        if (err.response) return alert(err.response.data);
+                        alert(err);
+                      }
+                      setLoading(false);
+                    })();
+                  }}
+                />
+              }
               showsVerticalScrollIndicator={false}
               data={expenseData}
               style={{ marginTop: 10 }}
