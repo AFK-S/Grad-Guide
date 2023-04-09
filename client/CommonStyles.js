@@ -39,6 +39,11 @@ export const CommonStyles = {
     padding: 10,
     borderRadius: 10,
   },
+  redBtn: {
+    backgroundColor: "red",
+    padding: 10,
+    borderRadius: 10,
+  },
   outlineBlueBtn: {
     borderColor: "#007bff",
     borderWidth: 1,
