@@ -32,13 +32,13 @@ def Create_Dataset(n=1000):
 
     predicted_travel = travel - (travel * (predict_percentage/100))
     predicted_food = food - (food * (predict_percentage/100))
-    predicted_entertainment = entertainment - \
-        (entertainment * (predict_percentage/100))
-    predicted_miscellaneous = miscellaneous - \
-        (miscellaneous * (predict_percentage/100))
+    predicted_entertainment = (
+        entertainment - (entertainment * (predict_percentage/100)))
+    predicted_miscellaneous = (
+        miscellaneous - (miscellaneous * (predict_percentage/100)))
 
-    predicted_expense = predicted_travel + predicted_food + \
-        predicted_entertainment + predicted_miscellaneous
+    predicted_expense = (predicted_travel + predicted_food +
+                         predicted_entertainment + predicted_miscellaneous)
     predicted_savings = pocket - predicted_expense
 
     df = pd.DataFrame({'pocket_money': pocket, 'travel': travel, 'food': food, 'entertainment': entertainment, 'miscellaneous': miscellaneous,
@@ -57,12 +57,18 @@ def Predict_Expense(parameters):
     y = df.drop(['pocket_money', 'travel', 'food', 'entertainment',
                 'miscellaneous', 'expense', 'savings'], axis=1)
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42)
+        X, y, test_size=0.2, random_state=40)
 
     model = LinearRegression()
     model.fit(X_train, y_train)
 
-    new_data = pd.DataFrame(parameters)
+    new_data = pd.DataFrame({
+        'pocket_money': [parameters['pocket_money']],
+        'travel': [parameters['travel']],
+        'food': [parameters['food']],
+        'entertainment': [parameters['entertainment']],
+        'miscellaneous': [parameters['miscellaneous']]
+    })
     predicted_expense = model.predict(new_data)
 
     travel = np.mean([p[0] for p in predicted_expense])
