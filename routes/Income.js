@@ -50,51 +50,211 @@ router.get('/income/:user_id', async (req, res) => {
 router.get('/left_amount/:user_id', async (req, res) => {
   const { user_id } = req.params
   try {
-    const debit_response = await TransactionSchema.aggregate([
+    const food_debit_response = await TransactionSchema.aggregate([
       {
         $match: {
           owner_id: user_id,
+          type: 'debit',
+          type_of_transaction: 'food',
+        },
+      },
+      {
+        $group: {
+          _id: '$owner_id',
+          total: {
+            $sum: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          total: 1,
+        },
+      },
+    ])
+    const travel_debit_response = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type: 'debit',
+          type_of_transaction: 'travel',
+        },
+      },
+      {
+        $group: {
+          _id: '$owner_id',
+          total: {
+            $sum: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          total: 1,
+        },
+      },
+    ])
+    const entertainment_debit_response = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type: 'debit',
+          type_of_transaction: 'entertainment',
+        },
+      },
+      {
+        $group: {
+          _id: '$owner_id',
+          total: {
+            $sum: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          total: 1,
+        },
+      },
+    ])
+    const miscellaneous_debit_response = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type: 'debit',
+          type_of_transaction: 'miscellaneous',
+        },
+      },
+      {
+        $group: {
+          _id: '$owner_id',
+          total: {
+            $sum: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          total: 1,
+        },
+      },
+    ])
+    res.json({
+      food_debit_response,
+      travel_debit_response,
+      entertainment_debit_response,
+      miscellaneous_debit_response,
+    })
+  } catch (error) {
+    console.log(error)
+    res.status(400).send(error.message)
+  }
+})
+
+router.get('/graph/:user_id', async (req, res) => {
+  const { user_id } = req.params
+  try {
+    const food_transactions = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type_of_transaction: 'food',
           type: 'debit',
         },
       },
       {
         $group: {
-          _id: '$owner_id',
-          total: {
-            $sum: '$amount',
+          _id: 0,
+          amount: {
+            $avg: '$amount',
           },
         },
       },
       {
         $project: {
           _id: 0,
-          total: 1,
+          amount: { $ceil: '$amount' },
         },
       },
     ])
-    const credit_response = await TransactionSchema.aggregate([
+    const travel_transactions = await TransactionSchema.aggregate([
       {
         $match: {
           owner_id: user_id,
-          type: 'credit',
+          type_of_transaction: 'travel',
+          type: 'debit',
         },
       },
       {
         $group: {
-          _id: '$owner_id',
-          total: {
-            $sum: '$amount',
+          _id: 0,
+          amount: {
+            $avg: '$amount',
           },
         },
       },
       {
         $project: {
           _id: 0,
-          total: 1,
+          amount: { $ceil: '$amount' },
         },
       },
     ])
-    res.json({ credit_response, debit_response })
+    const entertainment_transactions = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type_of_transaction: 'entertainment',
+          type: 'debit',
+        },
+      },
+      {
+        $group: {
+          _id: 0,
+          amount: {
+            $avg: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          amount: { $ceil: '$amount' },
+        },
+      },
+    ])
+    const miscellaneous_transactions = await TransactionSchema.aggregate([
+      {
+        $match: {
+          owner_id: user_id,
+          type_of_transaction: 'miscellaneous',
+          type: 'debit',
+        },
+      },
+      {
+        $group: {
+          _id: 0,
+          amount: {
+            $avg: '$amount',
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          amount: { $ceil: '$amount' },
+        },
+      },
+    ])
+    res.json({
+      food_transactions,
+      travel_transactions,
+      entertainment_transactions,
+      miscellaneous_transactions,
+    })
   } catch (error) {
     console.log(error)
     res.status(400).send(error.message)

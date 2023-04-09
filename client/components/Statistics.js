@@ -5,6 +5,7 @@ import { Dimensions } from 'react-native'
 import axios from 'axios'
 import { SERVER_URL } from '../config'
 import StateContext from '../context/StateContext'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const screenWidth = Dimensions.get('window').width
 
@@ -19,11 +20,11 @@ const chartConfig = {
 }
 
 const Statistics = () => {
-  const { User, setLoading } = useContext(StateContext)
+  const { setLoading } = useContext(StateContext)
   const [predictExpenseData, setPredictExpenseData] = useState([])
   const [carbonFootprint, setCarbonFootprint] = useState([])
   const data2 = {
-    // labels: ['Swim', 'Bike', 'Run'],
+    labels: ['Food', 'Travel', 'Entertainment', 'Miscellaneous'],
     data: carbonFootprint,
   }
   const data = {
@@ -39,8 +40,9 @@ const Statistics = () => {
     ;(async () => {
       setLoading(true)
       try {
+        const user_id = await AsyncStorage.getItem('user_id')
         const { data } = await axios.get(
-          `${SERVER_URL}/api/transactions/predict/${User}`,
+          `${SERVER_URL}/api/transactions/predict/${user_id}`,
         )
         setPredictExpenseData([
           data.food[0].amount,
@@ -48,11 +50,19 @@ const Statistics = () => {
           data.entertainment[0].amount,
           data.miscellaneous[0].amount,
         ])
+        const { data: graphData } = await axios.get(
+          `${SERVER_URL}/api/graph/${user_id}`,
+        )
+        const total =
+          graphData.food_transactions[0].amount +
+          graphData.travel_transactions[0].amount +
+          graphData.entertainment_transactions[0].amount +
+          graphData.miscellaneous_transactions[0].amount
         setCarbonFootprint([
-          data.food[0].amount / 100,
-          data.travel[0].amount / 100,
-          data.entertainment[0].amount / 100,
-          data.miscellaneous[0].amount / 100,
+          graphData.food_transactions[0].amount / total,
+          graphData.travel_transactions[0].amount / total,
+          graphData.entertainment_transactions[0].amount / total,
+          graphData.miscellaneous_transactions[0].amount / total,
         ])
       } catch (err) {
         console.error(err)

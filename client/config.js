@@ -1,3 +1,3 @@
-const SERVER_URL = 'http://10.120.112.54:8000'
+const SERVER_URL = 'http://192.168.137.1:8000'
 
 export { SERVER_URL }

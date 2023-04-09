@@ -64,7 +64,7 @@ router.get('/transactions/predict/:user_id', async (req, res) => {
         $group: {
           _id: 0,
           amount: {
-            $avg: '$amount',
+            $sum: '$amount',
           },
         },
       },
@@ -87,7 +87,7 @@ router.get('/transactions/predict/:user_id', async (req, res) => {
         $group: {
           _id: 0,
           amount: {
-            $avg: '$amount',
+            $sum: '$amount',
           },
         },
       },
@@ -110,7 +110,7 @@ router.get('/transactions/predict/:user_id', async (req, res) => {
         $group: {
           _id: 0,
           amount: {
-            $avg: '$amount',
+            $sum: '$amount',
           },
         },
       },
@@ -133,7 +133,7 @@ router.get('/transactions/predict/:user_id', async (req, res) => {
         $group: {
           _id: 0,
           amount: {
-            $avg: '$amount',
+            $sum: '$amount',
           },
         },
       },
