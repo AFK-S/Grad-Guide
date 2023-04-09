@@ -5,75 +5,140 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
-} from "react-native";
-import React from "react";
-import { CommonStyles } from "../CommonStyles";
+  Linking,
+  Image,
+} from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { CommonStyles } from '../CommonStyles'
+import axios from 'axios'
 
 const News = () => {
-  const data = [
+  const [newsdata, setNewsdata] = useState([
     {
-      title: "News 1",
-      description: "This is news 1",
+      title: 'Tesla (TSLA) Stock Sinks As Market Gains: What You Should Know',
+      description:
+        'Tesla (TSLA) closed the most recent trading day at $1,000.00, moving -0.5% from the previous trading session.',
+      url:
+        'https://www.nasdaq.com/articles/tesla-tsla-stock-sinks-as-market-gains-what-you-should-know-2021-09-17',
+      image:
+        'https://cdn.snapi.dev/images/v1/0/tesla-tsla-stock-sinks-as-market-gains-what-you-should-know-2021-09-17.jpg',
     },
     {
-      title: "News 2",
-      description: "This is news 2",
+      title: 'Tesla (TSLA) Stock Sinks As Market Gains: What You Should Know',
+      description:
+        'Tesla (TSLA) closed the most recent trading day at $1,000.00, moving -0.5% from the previous trading session.',
+      url:
+        'https://www.nasdaq.com/articles/tesla-tsla-stock-sinks-as-market-gains-what-you-should-know-2021-09-17',
+      image:
+        'https://cdn.snapi.dev/images/v1/0/tesla-tsla-stock-sinks-as-market-gains-what-you-should-know-2021-09-17.jpg',
     },
-    {
-      title: "News 3",
-      description: "This is news 3",
-    },
-  ];
+  ])
+
+  // const getNews = async () => {
+  //   const getnews = {
+  //     method: 'GET',
+  //     url:
+  //       'https://api.marketaux.com/v1/news/all?symbols=TSLA,AMZN,MSFT&filter_entities=true&language=en&api_token=1lhXR65E6XOUm3cZZCfj1yWKycd5WdKtgpgWztLY',
+  //   }
+  //   try {
+  //     const response = await axios.request(getnews)
+  //     setNewsdata(response.data.data)
+  //     console.log(newsdata)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getNews()
+  // }, [])
 
   return (
-    <SafeAreaView style={CommonStyles.container}>
+    <SafeAreaView>
       <FlatList
         keyExtractor={(item, index) => index.toString()}
         showsVerticalScrollIndicator={false}
         style={{ padding: 30 }}
-        data={data}
+        data={newsdata}
         renderItem={({ item }) => {
           return (
-            <View style={CommonStyles.card}>
-              <View style={CommonStyles.cardRow}>
-                <View>
-                  <Text style={styles.title}>{item.title}</Text>
-                  <View style={CommonStyles.divider}></View>
-                </View>
-                <View>
-                  <TouchableOpacity style={{ width: 100 }}>
+            <View
+              style={{
+                marginBottom: 30,
+                backgroundColor: 'white',
+                padding: 15,
+                borderRadius: 15,
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+              }}
+            >
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  // height: 150,
+                  // overflow: 'hidden',
+                }}
+              >
+                <View style={{ width: '100%', padding: 5 }}>
+                  <View>
                     <Text
                       style={{
-                        color: "#007bff",
-                        textAlign: "center",
-                        fontWeight: "bold",
+                        fontSize: 15,
+                        fontWeight: 'bold',
+                        marginBottom: 4,
                       }}
                     >
-                      Read More
+                      {item.title}
                     </Text>
-                  </TouchableOpacity>
+                    <View
+                      style={{
+                        height: 1,
+                        backgroundColor: '#e0e0e0',
+                        marginBottom: 10,
+                        marginTop: 10,
+                      }}
+                    ></View>
+                  </View>
+                  <Text>{item.description}</Text>
+                  <View
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'flex-end',
+                      alignItems: 'flex-end',
+                      marginTop: 10,
+                    }}
+                  >
+                    <TouchableOpacity>
+                      <Text
+                        style={{
+                          color: '#007bff',
+                          fontWeight: 'bold',
+                        }}
+                        onPress={() => {
+                          Linking.openURL(`${item.url}`)
+                        }}
+                      >
+                        Read More
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               </View>
-              <Text>{item.description}</Text>
-              <View>
-                <View
-                  style={{
-                    marginTop: 15,
-                    display: "flex",
-                    flexDirection: "row",
-                    width: "100%",
-                    justifyContent: "space-between",
-                  }}
-                ></View>
-              </View>
             </View>
-          );
+          )
         }}
       />
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default News;
+export default News
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
