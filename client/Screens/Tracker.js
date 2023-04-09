@@ -8,6 +8,7 @@ import {
   FlatList,
   ScrollView,
   Modal,
+  Image,
   TextInput,
 } from 'react-native'
 import React, { useEffect, useContext, useState } from 'react'
@@ -18,9 +19,8 @@ import StateContext from '../context/StateContext'
 import * as DocumentPicker from 'expo-document-picker'
 import RadioGroup from 'react-native-radio-buttons-group'
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-
 const Tracker = () => {
-  const { User, setLoading } = useContext(StateContext)
+  const { User, setLoading, Logout } = useContext(StateContext)
   const [userData, setUserData] = useState([])
   const [expenseData, setExpenseData] = useState([])
   const [predictExpenseData, setPredictExpenseData] = useState([])
@@ -146,18 +146,19 @@ const Tracker = () => {
             }}
           >
             <Text style={{ ...CommonStyles.title }}>Hello {userData.name}</Text>
-            <TouchableOpacity onPress={() => Alert.alert('logout')}>
-              <Text>Logout</Text>
+            <TouchableOpacity onPress={Logout}>
+              <Image
+                source={require('../assets/icons/logout.png')}
+                style={{ width: 25, height: 25 }}
+              />
             </TouchableOpacity>
           </View>
-
           <TouchableOpacity>
             <Text style={{ fontWeight: 'bold', color: 'blue' }}>
               {`Set Budget  `}
               <FontAwesomeIcon name="plus" size={10} color="blue" />
             </Text>
           </TouchableOpacity>
-
           <View style={{ ...CommonStyles.card, padding: 30, marginTop: 35 }}>
             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
               Your Next Month Plan is :

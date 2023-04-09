@@ -56,6 +56,12 @@ export const CommonStyles = {
     padding: 10,
     borderRadius: 10,
   },
+  outlineGreenBtn: {
+    borderColor: "green",
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
+  },
   actionButton: {
     alignItems: "center",
     position: "absolute",
