@@ -10,9 +10,9 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState, useContext } from 'react'
 import axios from 'axios'
-import Styles from '../CommonStyles'
-import StateContext from '../context/StateContext'
-import { SERVER_URL } from '../config'
+import Styles from '../../CommonStyles'
+import StateContext from '../../context/StateContext'
+import { SERVER_URL } from '../../config'
 
 const Register = ({ navigation }) => {
   const { setIsLogin, setLoading } = useContext(StateContext)
@@ -56,7 +56,14 @@ const Register = ({ navigation }) => {
       style={styles.container}
     >
       <SafeAreaView style={{ width: '100%', maxWidth: 500 }}>
-        <Text style={[Styles.bold, styles.title]}>
+        <Text
+          style={[
+            {
+              fontWeight: '600',
+            },
+            styles.title,
+          ]}
+        >
           Tell us more about you :)
         </Text>
         <TextInput
@@ -116,18 +123,24 @@ const Register = ({ navigation }) => {
         />
         <TouchableOpacity
           onPress={onSubmit}
-          style={{ ...Styles.button, marginTop: 10 }}
+          style={{
+            backgroundColor: '#007bff',
+            paddingVertical: 12,
+            borderRadius: 12,
+            paddingHorizontal: 40,
+            marginTop: 10,
+          }}
         >
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{ marginTop: 10 }}
-          onPress={() => navigation.navigate('register')}
+          onPress={() => navigation.navigate('login')}
         >
           <Text
             style={{
               textAlign: 'center',
-              fontFamily: Styles.medium.fontFamily,
+              fontWeight: '500',
             }}
             autoCapitalize="none"
             autoComplete="off"
@@ -164,7 +177,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontFamily: Styles.bold.fontFamily,
+    fontWeight: '600',
     fontSize: 18,
   },
 })

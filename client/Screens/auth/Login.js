@@ -10,9 +10,9 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState, useContext } from 'react'
 import axios from 'axios'
-import Styles from '../CommonStyles'
-import StateContext from '../context/StateContext'
-import { SERVER_URL } from '../config'
+import Styles from '../../CommonStyles'
+import StateContext from '../../context/StateContext'
+import { SERVER_URL } from '../../config'
 
 const Login = ({ navigation }) => {
   const { setIsLogin, setLoading } = useContext(StateContext)
@@ -42,7 +42,16 @@ const Login = ({ navigation }) => {
       style={styles.container}
     >
       <SafeAreaView style={{ width: '100%', maxWidth: 500 }}>
-        <Text style={[Styles.bold, styles.title]}>withU</Text>
+        <Text
+          style={[
+            {
+              fontWeight: '600',
+            },
+            styles.title,
+          ]}
+        >
+          GradGuide
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Email Address"
@@ -62,7 +71,13 @@ const Login = ({ navigation }) => {
         />
         <TouchableOpacity
           onPress={onSubmit}
-          style={{ ...Styles.button, marginTop: 10 }}
+          style={{
+            backgroundColor: '#007bff',
+            paddingVertical: 12,
+            borderRadius: 12,
+            paddingHorizontal: 40,
+            marginTop: 10,
+          }}
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
@@ -73,10 +88,11 @@ const Login = ({ navigation }) => {
           <Text
             style={{
               textAlign: 'center',
-              fontFamily: Styles.medium.fontFamily,
+              fontWeight: '500',
+              marginTop: 10,
             }}
           >
-            New to withU ? Register Here
+            New to GradGuide ? Register Here
           </Text>
         </TouchableOpacity>
       </SafeAreaView>
@@ -107,7 +123,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontFamily: Styles.bold.fontFamily,
+    fontWeight: '600',
     fontSize: 18,
   },
 })

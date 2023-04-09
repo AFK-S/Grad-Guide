@@ -7,6 +7,8 @@ import Gigs from './routes/Gigs.js'
 import Lend from './routes/Lend.js'
 import Transaction from './routes/Transaction.js'
 import User from './routes/User.js'
+import Community from './routes/Community.js'
+import Income from './routes/Income.js'
 
 const app = express()
 
@@ -27,6 +29,8 @@ app.use('/api', Gigs)
 app.use('/api', Lend)
 app.use('/api', Transaction)
 app.use('/api', User)
+app.use('/api', Community)
+app.use('/api', Income)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

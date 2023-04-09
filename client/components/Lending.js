@@ -1,24 +1,34 @@
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  Platform,
+  Image,
+} from "react-native";
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import LentTransaction from "./LentTransaction";
 import Scholarship from "./Scholarship";
 import CompletedTransactions from "./CompletedTransactions";
+import Borrow from "./Borrow";
 
 const Tab = createMaterialTopTabNavigator();
 const Lending = () => {
   return (
     <Tab.Navigator
-      style={{ paddingTop: StatusBar.currentHeight }}
+      style={{
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 0,
+      }}
     >
       <Tab.Screen
         options={{
           title: ({ color, focused }) => (
-            <Ionicons
-              size={25}
-              name={focused ? "people" : "people-outline"}
-              color={focused ? "black" : "#272727"}
+            <Image
+              source={require("../assets/icons/money.png")}
+              resizeMode="contain"
+              style={{ height: 30, width: 30 }}
             />
           ),
         }}
@@ -28,28 +38,28 @@ const Lending = () => {
       <Tab.Screen
         options={{
           title: ({ color, focused }) => (
-            <Ionicons
-              size={25}
-              name={focused ? "book" : "book-outline"}
-              color={focused ? "black" : "#272727"}
+            <Image
+              source={require("../assets/icons/wall-clock.png")}
+              resizeMode="contain"
+              style={{ height: 25, width: 25 }}
+            />
+          ),
+        }}
+        component={Borrow}
+        name="Completed"
+      />
+      <Tab.Screen
+        options={{
+          title: ({ color, focused }) => (
+            <Image
+              source={require("../assets/icons/checked.png")}
+              resizeMode="contain"
+              style={{ height: 25, width: 25 }}
             />
           ),
         }}
         component={CompletedTransactions}
         name="Borrowed"
-      />
-      <Tab.Screen
-        options={{
-          title: ({ color, focused }) => (
-            <Ionicons
-              size={25}
-              name={focused ? "book" : "book-outline"}
-              color={focused ? "black" : "#272727"}
-            />
-          ),
-        }}
-        component={CompletedTransactions}
-        name="Completed"
       />
     </Tab.Navigator>
   );

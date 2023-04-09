@@ -9,7 +9,7 @@ import {
 import React, { useState } from "react";
 import { CommonStyles } from "../CommonStyles";
 
-const LentTransaction = () => {
+const Borrow = () => {
   const [transactions, setTransactions] = useState([
     {
       id: 1,
@@ -35,7 +35,7 @@ const LentTransaction = () => {
           paddingBottom: 0,
         }}
       >
-        Money Lent to Others
+        Pending to be Paid
       </Text>
 
       <FlatList
@@ -76,7 +76,7 @@ const LentTransaction = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  Mark as Received
+                  Mark as Paid
                 </Text>
               </TouchableOpacity>
             </View>
@@ -87,6 +87,6 @@ const LentTransaction = () => {
   );
 };
 
-export default LentTransaction;
+export default Borrow;
 
 const styles = StyleSheet.create({});

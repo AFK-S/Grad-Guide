@@ -1,30 +1,30 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Expenses from "../components/Expenses";
-import Gigs from "../Screens/Gigs";
-import Lending from "../components/Lending";
-import React from "react";
-import Social from "../components/Social";
-import News from "../components/News";
+import { StyleSheet, Text, View, Image, Platform } from 'react-native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Expenses from '../components/Expenses'
+import Gigs from '../Screens/Gigs'
+import Lending from '../components/Lending'
+import React from 'react'
+import Social from '../components/Social'
+import News from '../components/News'
 
 const Mainscreen = () => {
-  const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator()
   return (
     <Tab.Navigator
       initialRouteName="Expenses"
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: "absolute",
+          position: 'absolute',
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: "#fff",
+          backgroundColor: '#fff',
           borderTopLeftRadius: 40,
           borderTopRightRadius: 40,
           padding: 50,
           height: 100,
-          shadowColor: "#000",
+          shadowColor: '#000',
           shadowOffset: { width: 0, height: 2 },
           shadowOpacity: 0.07,
           shadowRadius: 20,
@@ -39,18 +39,19 @@ const Mainscreen = () => {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-                top: Platform.OS === "android" ? 0 : -15,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: Platform.OS === 'android' ? 0 : -15,
                 padding: 20,
                 borderRadius: 15,
                 aspectRatio: 1,
+                marginBottom: Platform.OS === 'ios' ? 0 : 45,
               }}
             >
               <Image
-                source={require("../assets/icons/freelance.png")}
+                source={require('../assets/icons/freelance.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -69,18 +70,19 @@ const Mainscreen = () => {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-                top: Platform.OS === "android" ? 0 : -15,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: Platform.OS === 'android' ? 0 : -15,
                 padding: 20,
                 borderRadius: 15,
                 aspectRatio: 1,
+                marginBottom: Platform.OS === 'ios' ? 0 : 45,
               }}
             >
               <Image
-                source={require("../assets/icons/network.png")}
+                source={require('../assets/icons/network.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -95,22 +97,23 @@ const Mainscreen = () => {
       <Tab.Screen
         name="Expenses"
         options={{
-          headerShown: true,
+          headerShown:true,
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-                top: Platform.OS === "android" ? 0 : -15,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: Platform.OS === 'android' ? 0 : -15,
                 padding: 20,
                 borderRadius: 15,
                 aspectRatio: 1,
+                marginBottom: Platform.OS === 'ios' ? 0 : 45,
               }}
             >
               <Image
-                source={require("../assets/icons/budget.png")}
+                source={require('../assets/icons/budget.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -129,18 +132,19 @@ const Mainscreen = () => {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-                top: Platform.OS === "android" ? 0 : -15,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: Platform.OS === 'android' ? 0 : -15,
                 padding: 20,
                 borderRadius: 15,
                 aspectRatio: 1,
+                marginBottom: Platform.OS === 'ios' ? 0 : 45,
               }}
             >
               <Image
-                source={require("../assets/icons/creditor.png")}
+                source={require('../assets/icons/creditor.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -153,24 +157,25 @@ const Mainscreen = () => {
         component={Lending}
       />
       <Tab.Screen
-        name="news"
+        name="News"
         options={{
           headerShown: true,
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-                top: Platform.OS === "android" ? 0 : -15,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: Platform.OS === 'android' ? 0 : -15,
                 padding: 20,
                 borderRadius: 15,
                 aspectRatio: 1,
+                marginBottom: Platform.OS === 'ios' ? 0 : 45,
               }}
             >
               <Image
-                source={require("../assets/icons/news.png")}
+                source={require('../assets/icons/news.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
@@ -183,9 +188,9 @@ const Mainscreen = () => {
         component={News}
       />
     </Tab.Navigator>
-  );
-};
+  )
+}
 
-export default Mainscreen;
+export default Mainscreen
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
