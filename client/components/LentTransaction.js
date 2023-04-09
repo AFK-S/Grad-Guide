@@ -60,7 +60,7 @@ const LentTransaction = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  ${item.amount}
+                  ₹{item.amount}
                 </Text>
               </View>
               <Text style={{ ...CommonStyles.silentText, fontSize: 13 }}>
