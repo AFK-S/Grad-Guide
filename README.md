@@ -1,35 +1,39 @@
-**GradGuide Project README
-**
+# **GradGuide Project README**
+
 Welcome to GradGuide, your comprehensive financial management platform tailored for students and graduates. This project is built using React Native for the front-end, Node.js with Express.js for the back-end, and MongoDB as the database. The language involved in the development of this project is JavaScript.
 
-Features
-**1. Expense Tracking
-**GradGuide offers a user-friendly expense tracking system that allows you to keep a record of your expenditures. You can categorize expenses, set budgets, and analyze your spending patterns through insightful visualizations.
+## **Features**
 
-**2. Graph Visualization of Expenses
-**Visualizing your expenses is an essential aspect of financial management. GradGuide provides interactive graphs and charts to give you a clear understanding of where your money is going and how you can improve your financial habits.
+### **1. Expense Tracking**
+GradGuide offers a user-friendly expense tracking system that allows you to keep a record of your expenditures. You can categorize expenses, set budgets, and analyze your spending patterns through insightful visualizations.
 
-**3. Blog Page
-**Our platform includes a blog page where you can share your investment experiences, financial advice, and inspiring stories. Engage with the community, learn from others, and build a strong network of like-minded individuals.
+### **2. Graph Visualization of Expenses**
+Visualizing your expenses is an essential aspect of financial management. GradGuide provides interactive graphs and charts to give you a clear understanding of where your money is going and how you can improve your financial habits.
 
-**4. Gig Listing Page
-**Looking for ways to earn some extra money? GradGuide's Gig Listing Page is the ideal place to discover various gig opportunities. Find gigs that suit your skills or even list a gig of your own and get the job done.
+### **3. Blog Page**
+Our platform includes a blog page where you can share your investment experiences, financial advice, and inspiring stories. Engage with the community, learn from others, and build a strong network of like-minded individuals.
 
-**5. Money Lending Screen
-**Keep track of the money you've lent to others and the money you owe to someone through the Money Lending Screen. Easily manage your lending transactions and mark them as completed once resolved.
+### **4. Gig Listing Page**
+Looking for ways to earn some extra money? GradGuide's Gig Listing Page is the ideal place to discover various gig opportunities. Find gigs that suit your skills or even list a gig of your own and get the job done.
 
-**6. News Page
-**Stay informed about the latest finance-related news and updates through our News Page. Whether it's market trends, investment tips, or economic developments, GradGuide keeps you in the loop.
+### **5. Money Lending Screen**
+Keep track of the money you've lent to others and the money you owe to someone through the Money Lending Screen. Easily manage your lending transactions and mark them as completed once resolved.
 
-Getting Started
+### **6. News Page**
+Stay informed about the latest finance-related news and updates through our News Page. Whether it's market trends, investment tips, or economic developments, GradGuide keeps you in the loop.
+
+## **Getting Started**
+
 To start using GradGuide, follow these steps:
 
-Clone the project repository from GitHub.
-Install the necessary dependencies for the front-end and back-end using npm.
-Set up your MongoDB database.
-Configure the back-end server using Express.js.
-Run the React Native app on your local development environment.
-Contributing
+1. Clone the project repository from GitHub.
+2. Install the necessary dependencies for the front-end and back-end using npm.
+3. Set up your MongoDB database.
+4. Setup the config.js file in the client folder depending on your IP address.
+5. Run the React Native app on your local development environment.
+
+## **Contributing**
+
 We welcome contributions from the community to improve GradGuide further. If you encounter any bugs, have suggestions for new features, or want to enhance existing functionality, please feel free to create a pull request.
 
 
