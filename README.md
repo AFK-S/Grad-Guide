@@ -4,44 +4,47 @@ Welcome to GradGuide, your comprehensive financial management platform tailored 
 
 ## **Features**
 
-### **1. Expense Tracking**
-GradGuide offers a user-friendly expense tracking system that allows you to keep a record of your expenditures. You can categorize expenses, set budgets, and analyze your spending patterns through insightful visualizations.
+- **Expense Tracking:** Keep a record of your expenditures, categorize expenses, set budgets, and analyze your spending patterns through insightful visualizations.
 
-### **2. Graph Visualization of Expenses**
-Visualizing your expenses is an essential aspect of financial management. GradGuide provides interactive graphs and charts to give you a clear understanding of where your money is going and how you can improve your financial habits.
+- **Graph Visualization of Expenses:** Interactive graphs and charts provide a clear understanding of your financial habits and where your money is going.
 
-### **3. Blog Page**
-Our platform includes a blog page where you can share your investment experiences, financial advice, and inspiring stories. Engage with the community, learn from others, and build a strong network of like-minded individuals.
+- **Blog Page:** Share investment experiences, financial advice, and inspiring stories while building a strong network with like-minded individuals.
 
-### **4. Gig Listing Page**
-Looking for ways to earn some extra money? GradGuide's Gig Listing Page is the ideal place to discover various gig opportunities. Find gigs that suit your skills or even list a gig of your own and get the job done.
+- **Gig Listing Page:** Discover various gig opportunities, find gigs that suit your skills, or list your own gigs to earn extra money.
 
-### **5. Money Lending Screen**
-Keep track of the money you've lent to others and the money you owe to someone through the Money Lending Screen. Easily manage your lending transactions and mark them as completed once resolved.
+- **Money Lending Screen:** Easily manage lending transactions, keep track of money lent to others, and money owed to you.
 
-### **6. News Page**
-Stay informed about the latest finance-related news and updates through our News Page. Whether it's market trends, investment tips, or economic developments, GradGuide keeps you in the loop.
+- **News Page:** Stay informed about the latest finance-related news and updates, including market trends and investment tips.
 
-## **Getting Started**
+## **How GradGuide is Different**
 
-To start using GradGuide, follow these steps:
+GradGuide stands out from other platforms for student finance in several ways:
 
-1. Clone the project repository from GitHub.
-2. Install the necessary dependencies for the front-end and back-end using npm.
-3. Set up your MongoDB database.
-4. Setup the config.js file in the client folder depending on your IP address if you want to run it on your local machine.
-5. Run the React Native app on your local development environment.
+1. **Tailored for Students and Graduates:** GradGuide is specifically designed to address the financial needs and challenges of students and graduates, offering features that align with their unique financial situations.
 
-## **Contributing**
+2. **Comprehensive Expense Tracking:** GradGuide provides a user-friendly and comprehensive expense tracking system, enabling users to manage their finances efficiently and make informed financial decisions.
 
-We welcome contributions from the community to improve GradGuide further. If you encounter any bugs, have suggestions for new features, or want to enhance existing functionality, please feel free to create a pull request.
+3. **Engaging Community:** The platform fosters a community-driven environment with a blog page where users can share experiences, advice, and stories, promoting learning and networking opportunities.
 
-# **Screens**
+4. **Gig Opportunities:** GradGuide's Gig Listing Page helps users find or offer gig opportunities, providing a platform for students and graduates to explore freelance and part-time work.
 
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 51 36](https://user-images.githubusercontent.com/72909842/233846741-0a4ef25e-7308-4461-8393-c642dde0b749.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 47 47](https://user-images.githubusercontent.com/72909842/233846755-7b8fb295-7a2c-4e11-85fb-17d7cff26acf.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 00](https://user-images.githubusercontent.com/72909842/233846760-8309f530-da2e-41a1-86e6-00011b3385f0.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 06](https://user-images.githubusercontent.com/72909842/233846763-63b92cab-7e81-468a-8aa1-93c35b3fadae.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 14](https://user-images.githubusercontent.com/72909842/233846766-be6f3186-45d9-4f59-91c2-8c72a7af3fc0.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 30](https://user-images.githubusercontent.com/72909842/233846767-29f1ce70-af87-4c5a-8f74-7a981642dd86.png)
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 49 03](https://user-images.githubusercontent.com/72909842/233846769-e726127c-cf9c-430a-8685-cc644cd18659.png)
+5. **Money Lending Management:** The Money Lending Screen allows users to keep track of lending transactions, helping them maintain healthy financial relationships.
+
+6. **Stay Informed:** The News Page keeps users updated with relevant financial news, empowering them to stay informed and make smart financial decisions.
+
+## **Idea behind GradGuide**
+
+The idea behind GradGuide is to enhance and better student finance management by providing a dedicated platform that caters to the financial needs of students and graduates. Managing finances during these crucial years can be challenging, and GradGuide aims to simplify this process, promote responsible spending, and empower users to achieve their financial goals.
+
+## **Objective of GradGuide**
+
+The primary objective of GradGuide is to equip students and graduates with a powerful financial management tool that allows them to:
+
+- Gain better control over their expenses and budgets.
+- Understand their financial habits through visualizations.
+- Learn from others in the community through the blog page.
+- Explore gig opportunities to earn extra income.
+- Keep track of lending transactions for healthy financial relationships.
+- Stay informed about financial news and trends.
+
+GradGuide strives to be a reliable companion throughout the financial journey of students and graduates, helping them build a strong foundation for their future.
