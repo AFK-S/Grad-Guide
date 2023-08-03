@@ -55,11 +55,10 @@ GradGuide strives to be a reliable companion throughout the financial journey of
 Here are some screenshots of GradGuide:
 
 <div align="center">
-  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="250" />
-  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="250" />
-  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="250" />
-  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="250" />
-
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="200" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="200" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="200" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="200" />
 </div>
 
 <div align="center">
