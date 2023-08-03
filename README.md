@@ -36,8 +36,9 @@ To start using GradGuide, follow these steps:
 
 We welcome contributions from the community to improve GradGuide further. If you encounter any bugs, have suggestions for new features, or want to enhance existing functionality, please feel free to create a pull request.
 
+# **Screenshots**
 
-# djcsi-AFKS![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 51 36](https://user-images.githubusercontent.com/72909842/233846741-0a4ef25e-7308-4461-8393-c642dde0b749.png)
+![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 51 36](https://user-images.githubusercontent.com/72909842/233846741-0a4ef25e-7308-4461-8393-c642dde0b749.png)
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 47 47](https://user-images.githubusercontent.com/72909842/233846755-7b8fb295-7a2c-4e11-85fb-17d7cff26acf.png)
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 00](https://user-images.githubusercontent.com/72909842/233846760-8309f530-da2e-41a1-86e6-00011b3385f0.png)
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 48 06](https://user-images.githubusercontent.com/72909842/233846763-63b92cab-7e81-468a-8aa1-93c35b3fadae.png)
