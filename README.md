@@ -54,78 +54,32 @@ GradGuide strives to be a reliable companion throughout the financial journey of
 
 Here are some screenshots of GradGuide:
 
-<div style="display: flex; justify-content: center;">
-
-  <div>
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="250" />
-  </div>
-
-  <div>
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="250" />
-  </div>
-
-  <div>
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="250" />
-  </div>
-
+<div align="center">
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="250" />
 </div>
 
-<div style="display: flex; justify-content: center;">
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/929c7093-ba51-4a95-a4d7-a65a42380927" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/7205b1ca-2d86-439d-96b8-c1fffb17140e" width="250" />
-  </div>
-
+<div align="center">
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/929c7093-ba51-4a95-a4d7-a65a42380927" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/7205b1ca-2d86-439d-96b8-c1fffb17140e" width="250" />
 </div>
 
-<div style="display: flex; justify-content: center;">
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/bacda33c-4f96-4152-a684-7ea938a1968e" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/9825f556-be1f-4115-9a03-1eccb0d1d09c" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/4b05ea27-2c3e-488c-a7a9-0b47234ad771" width="250" />
-  </div>
-
+<div align="center">
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/bacda33c-4f96-4152-a684-7ea938a1968e" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/9825f556-be1f-4115-9a03-1eccb0d1d09c" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/4b05ea27-2c3e-488c-a7a9-0b47234ad771" width="250" />
 </div>
 
-<div style="display: flex; justify-content: center;">
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/88f1868c-1b2c-4368-aeda-373261b44a20" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/ba846fdd-8e53-4f43-bd2d-5c2b6721185f" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/58075371-bd62-44a6-9b95-92f3fee1ec89" width="250" />
-  </div>
-
+<div align="center">
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/88f1868c-1b2c-4368-aeda-373261b44a20" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/ba846fdd-8e53-4f43-bd2d-5c2b6721185f" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/58075371-bd62-44a6-9b95-92f3fee1ec89" width="250" />
 </div>
 
-<div style="display: flex; justify-content: center;">
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/dbaf91f3-245e-414d-a5c9-ea3f8c9342ec" width="250" />
-  </div>
-
-  <div style="margin: 10px;">
-    <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/44ed4d50-17ef-4353-81ee-30605c735339" width="250" />
-  </div>
-
+<div align="center">
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/dbaf91f3-245e-414d-a5c9-ea3f8c9342ec" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/44ed4d50-17ef-4353-81ee-30605c735339" width="250" />
 </div>
+
