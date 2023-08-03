@@ -53,13 +53,18 @@ GradGuide strives to be a reliable companion throughout the financial journey of
 ## **Screens**
 
 Here are some screenshots of GradGuide:
-
-![Screen 1](![IMG_3440](https://github.com/AFK-S/Grad-Guide/assets/98736611/2d16de25-bb0d-4be3-a293-1751ddbb2ec1)
-) ![Screen 2](![IMG_3441](https://github.com/AFK-S/Grad-Guide/assets/98736611/b6445e3e-a05e-4e0b-91be-100a51f6afa2)
-) ![Screen 3](![IMG_3442](https://github.com/AFK-S/Grad-Guide/assets/98736611/43198d26-6a58-4b9f-9133-67d5b282a251)
-)
-![Screen 4](path/to/screen4.png) ![Screen 5](path/to/screen5.png) ![Screen 6](path/to/screen6.png)
-![Screen 7](path/to/screen7.png) ![Screen 8](path/to/screen8.png) ![Screen 9](path/to/screen9.png)
-![Screen 10](path/to/screen10.png) ![Screen 11](path/to/screen11.png) ![Screen 12](path/to/screen12.png)
-![Screen 13](path/to/screen13.png) ![Screen 14](path/to/screen14.png) ![Screen 15](path/to/screen15.png)
+![IMG_3440](https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610)
+![IMG_3441](https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f)
+![IMG_3442](https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286)
+![IMG_3437](https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb)
+![IMG_3438](https://github.com/AFK-S/Grad-Guide/assets/98736611/929c7093-ba51-4a95-a4d7-a65a42380927)
+![IMG_3431](https://github.com/AFK-S/Grad-Guide/assets/98736611/7205b1ca-2d86-439d-96b8-c1fffb17140e)
+![IMG_3432](https://github.com/AFK-S/Grad-Guide/assets/98736611/bacda33c-4f96-4152-a684-7ea938a1968e)
+![IMG_3433](https://github.com/AFK-S/Grad-Guide/assets/98736611/9825f556-be1f-4115-9a03-1eccb0d1d09c)
+![IMG_3434](https://github.com/AFK-S/Grad-Guide/assets/98736611/4b05ea27-2c3e-488c-a7a9-0b47234ad771)
+![IMG_3435](https://github.com/AFK-S/Grad-Guide/assets/98736611/88f1868c-1b2c-4368-aeda-373261b44a20)
+![IMG_3436](https://github.com/AFK-S/Grad-Guide/assets/98736611/ba846fdd-8e53-4f43-bd2d-5c2b6721185f)
+![IMG_3425](https://github.com/AFK-S/Grad-Guide/assets/98736611/58075371-bd62-44a6-9b95-92f3fee1ec89)
+![IMG_3427](https://github.com/AFK-S/Grad-Guide/assets/98736611/dbaf91f3-245e-414d-a5c9-ea3f8c9342ec)
+![IMG_3428](https://github.com/AFK-S/Grad-Guide/assets/98736611/44ed4d50-17ef-4353-81ee-30605c735339)
 
