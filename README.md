@@ -29,7 +29,7 @@ To start using GradGuide, follow these steps:
 1. Clone the project repository from GitHub.
 2. Install the necessary dependencies for the front-end and back-end using npm.
 3. Set up your MongoDB database.
-4. Setup the config.js file in the client folder depending on your IP address.
+4. Setup the config.js file in the client folder depending on your IP address if you want to run it on your local machine.
 5. Run the React Native app on your local development environment.
 
 ## **Contributing**
