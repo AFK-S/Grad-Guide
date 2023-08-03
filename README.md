@@ -6,7 +6,7 @@ Welcome to GradGuide, your comprehensive financial management platform tailored 
 
 - **Expense Tracking:** Keep a record of your expenditures, categorize expenses, set budgets, and analyze your spending patterns through insightful visualizations.
 
-- **Graph Visualization of Expenses:** Interactive graphs and charts provide a clear understanding of your financial habits and where your money is going.
+- **Visualization of Expenses:** Interactive graphs and charts provide a clear understanding of your financial habits and where your money is going.
 
 - **Blog Page:** Share investment experiences, financial advice, and inspiring stories while building a strong network with like-minded individuals.
 
