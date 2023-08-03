@@ -36,7 +36,7 @@ To start using GradGuide, follow these steps:
 
 We welcome contributions from the community to improve GradGuide further. If you encounter any bugs, have suggestions for new features, or want to enhance existing functionality, please feel free to create a pull request.
 
-# **Screenshots**
+# **Screens**
 
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 51 36](https://user-images.githubusercontent.com/72909842/233846741-0a4ef25e-7308-4461-8393-c642dde0b749.png)
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-09 at 10 47 47](https://user-images.githubusercontent.com/72909842/233846755-7b8fb295-7a2c-4e11-85fb-17d7cff26acf.png)
