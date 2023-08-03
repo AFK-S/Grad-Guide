@@ -49,6 +49,20 @@ The primary objective of GradGuide is to equip students and graduates with a pow
 
 GradGuide strives to be a reliable companion throughout the financial journey of students and graduates, helping them build a strong foundation for their future.
 
+## **Getting Started**
+
+To start using GradGuide, follow these steps:
+
+1. Clone the project repository from GitHub.
+2. Install the necessary dependencies for the front-end and back-end using npm.
+3. Set up your MongoDB database.
+4. Setup the config.js file in the client folder depending on your IP address if you want to run it on your local machine.
+5. Run the React Native app on your local development environment.
+
+## **Contributing**
+
+We welcome contributions from the community to improve GradGuide further. If you encounter any bugs, have suggestions for new features, or want to enhance existing functionality, please feel free to create a pull request.
+
 
 ## **Screens**
 
