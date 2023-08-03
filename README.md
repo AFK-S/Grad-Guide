@@ -49,6 +49,12 @@ The primary objective of GradGuide is to equip students and graduates with a pow
 
 GradGuide strives to be a reliable companion throughout the financial journey of students and graduates, helping them build a strong foundation for their future.
 
+## Developed by
+- [Karandeep Singh Sandhu](https://github.com/Karan2310)
+- [Aditya Rai](https://github.com/adi50920)
+- [Faizan Potrick](https://github.com/FaizanPotrick)
+- [Sarthak Deshmukh](https://github.com/SarthakDeshmukh13)
+
 ## **Getting Started**
 
 To start using GradGuide, follow these steps:
