@@ -58,10 +58,11 @@ Here are some screenshots of GradGuide:
   <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="250" />
   <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="250" />
   <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="250" />
+  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="250" />
+
 </div>
 
 <div align="center">
-  <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/c2b6a766-7df8-4fd9-876f-dcc59aca0ddb" width="250" />
   <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/929c7093-ba51-4a95-a4d7-a65a42380927" width="250" />
   <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/7205b1ca-2d86-439d-96b8-c1fffb17140e" width="250" />
 </div>
