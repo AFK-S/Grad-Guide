@@ -56,15 +56,15 @@ Here are some screenshots of GradGuide:
 
 <div style="display: flex; justify-content: center;">
 
-  <div style="margin: 1px;">
+  <div>
     <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/055f4fe4-d3b9-4445-a935-8ce0395d2610" width="250" />
   </div>
 
-  <div style="margin: 1px;">
+  <div>
     <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/8025c668-ca97-49a3-97d3-9cf681b40e3f" width="250" />
   </div>
 
-  <div style="margin: 1px;">
+  <div>
     <img src="https://github.com/AFK-S/Grad-Guide/assets/98736611/cc62ca6d-8a0b-4907-b688-e3feefd88286" width="250" />
   </div>
 
