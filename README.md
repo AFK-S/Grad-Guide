@@ -48,3 +48,18 @@ The primary objective of GradGuide is to equip students and graduates with a pow
 - Stay informed about financial news and trends.
 
 GradGuide strives to be a reliable companion throughout the financial journey of students and graduates, helping them build a strong foundation for their future.
+
+
+## **Screens**
+
+Here are some screenshots of GradGuide:
+
+![Screen 1](![IMG_3440](https://github.com/AFK-S/Grad-Guide/assets/98736611/2d16de25-bb0d-4be3-a293-1751ddbb2ec1)
+) ![Screen 2](![IMG_3441](https://github.com/AFK-S/Grad-Guide/assets/98736611/b6445e3e-a05e-4e0b-91be-100a51f6afa2)
+) ![Screen 3](![IMG_3442](https://github.com/AFK-S/Grad-Guide/assets/98736611/43198d26-6a58-4b9f-9133-67d5b282a251)
+)
+![Screen 4](path/to/screen4.png) ![Screen 5](path/to/screen5.png) ![Screen 6](path/to/screen6.png)
+![Screen 7](path/to/screen7.png) ![Screen 8](path/to/screen8.png) ![Screen 9](path/to/screen9.png)
+![Screen 10](path/to/screen10.png) ![Screen 11](path/to/screen11.png) ![Screen 12](path/to/screen12.png)
+![Screen 13](path/to/screen13.png) ![Screen 14](path/to/screen14.png) ![Screen 15](path/to/screen15.png)
+
