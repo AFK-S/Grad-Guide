@@ -43,15 +43,6 @@ GradGuide stands out from other platforms for student finance in several ways:
 
 The idea behind is to enhance and better student finance management by providing a dedicated platform that caters to the financial needs of students and graduates. Managing finances during these crucial years can be challenging, and GradGuide aims to simplify this process, promote responsible spending, and empower users to achieve their financial goals.
 
-
-## How is withU different ?
-
-- Increased reach: The traditional SOS system only contacts emergency services. In contrast, withU can alert the user's emergency contacts, and nearby users within the community icreasing the reach of the alert.
-- Real-time location sharing: The app shares the victim's location in real-time, which can help responders locate the victim quickly. This feature is not available in the traditional SOS system.
-- User-friendly: The app is developed using React Native, which is known for creating user-friendly interfaces. 
-- Community building: Since the app also sends alerts to users within the community, it promotes trust and a level of comfort for everyone around. It ultimately benefits the community’s Safety and peace as a whole.
-
-
 ## Built With
 
 - [React Native](https://reactnative.dev/)
@@ -78,7 +69,7 @@ Steps to install and setup the app are demonstrated with following commands:
   git clone https://github.com/AFK-S/Grad-Guide.git
 ```
 ```bash
-  cd withU
+  cd Grad-Guide
 ```
 
 
