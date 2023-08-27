@@ -1,5 +1,5 @@
 {
-  "name": "djcsi-codeshastra-9",
+  "name": "Grad-Guide",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,16 +9,11 @@
     "start": "nodemon app.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AFK-S/djcsi-codeshastra-9.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AFK-S/djcsi-codeshastra-9/issues"
-  },
-  "homepage": "https://github.com/AFK-S/djcsi-codeshastra-9#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
