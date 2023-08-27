@@ -69,7 +69,7 @@ Steps to install and setup the app are demonstrated with following commands:
   git clone https://github.com/AFK-S/Grad-Guide.git
 ```
 ```bash
-  cd withU
+  cd Grad-Guide
 ```
 
 
